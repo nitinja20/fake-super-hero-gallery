@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Superhero Gallery</title>
+
+  <style>
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+    color: white;
+    margin: 0;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #ffcc00;
+    text-shadow: 2px 2px 8px black;
+  }
+  
+  h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #ffffff;
+  text-shadow:
+    0 0 10px #bb00ff,
+    0 0 20px #bb00ff,
+    0 0 30px #bb00ff;
+}
+
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .card {
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(180, 100, 255, 0.5), 0 0 40px rgba(180, 100, 255, 0.2);
+}
+
+
+  .card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+  }
+
+  .card a img:hover {
+    opacity: 0.9;
+  }
+
+  .card h3 {
+    margin: 10px 0 5px;
+    color: #ff9900;
+    font-size: 1.2em;
+  }
+
+  .card p {
+    font-size: 14px;
+    color: #ccc;
+    text-align: left;
+    line-height: 1.5;
+  }
+
+  em {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    color: #66ccff;
+  }
+
+  @media (max-width: 768px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+
+    h1 {
+      font-size: 1.8em;
+    }
+  }
+  <!--trikaiju-->
+.slideshow-auto {
+  position: relative;
+  max-width: 400px;  /* adjust as needed */
+  overflow: hidden;
+  border-radius: 10px;
+  background: #1a1a1a;
+  padding: 15px;
+  box-sizing: border-box;
+  color: white;
+}
+
+.slideshow-auto .slides {
+  display: flex;
+  width: 400%; /* 4 images */
+  animation: slideAnimation 6s infinite;
+}
+
+.slideshow-auto .slides img {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 8px;
+  object-fit: contain;
+  max-height: 250px;
+}
+
+/* Keyframes for sliding */
+@keyframes slideAnimation {
+  0%   { transform: translateX(0%); }
+  22%  { transform: translateX(0%); }     /* show first image */
+  25%  { transform: translateX(-100%); }  /* move to 2nd */
+  47%  { transform: translateX(-100%); }
+  50%  { transform: translateX(-200%); }  /* move to 3rd */
+  72%  { transform: translateX(-200%); }
+  75%  { transform: translateX(-300%); }  /* move to 4th */
+  97%  { transform: translateX(-300%); }
+  100% { transform: translateX(0%); }     /* loop back */
+}
+
+  
+</style>
+
+</head>
+<body>
+
+  <h1>My Fake Superhero Gallery</h1>
+  <div class="gallery">
+
+    <!-- Gulvarine Card -->
+    <div class="card">
+	<a href="gulvarine.html">
+  <img src="gulvarine.jpg.png" alt="gulvarine.jpg.png">
+</a>
+      <h3>🔥 Gulvarine – The Desert Fang</h3>
+      <p>
+        <strong>⚔️ Real Name:</strong> Gulzar Khan<br>
+        <strong>🌍 Origin:</strong> A nomadic warrior cursed by a dying djinn in the Thar Desert. Transformed into a beast of vengeance wielding ancient desert magic and feral strength.<br>
+        <strong>🧬 Powers:</strong> Zarrium claws, solar healing, sand teleportation, berserker mirages.<br>
+        <strong>👁️ Look:</strong> Glowing amber eyes, jackal skull mask, runed tattoos, desert robes.<br>
+        <strong>🐺 Traits:</strong> Stoic, haunted, balanced in justice.<br>
+        <em><strong>🏜️ "From the sands I rise. For blood and balance, I strike."</strong></em>
+      </p>
+    </div>
+
+    <div class="card">
+ <a href="orbweaver.html">
+  <img src="orbweaver.jpg" alt="orbweaver.jpg">
+</a>
+  <h3>🕷️ Orb-Weaver – The Web Architect</h3>
+  <p>
+    <strong>⚔️ Real Name:</strong> Aryan Das<br>
+    <strong>🌍 Origin:</strong> A biomechanical engineer in Kolkata, Aryan was bitten by a genetically engineered orb-weaver spider. The venom rewired his nervous system, turning him into a stealth-based web-warrior who strikes unseen.<br>
+    <strong>🧬 Powers:</strong> Architect Silk (multi-use web structures), mirror camouflage, super-vibration senses, retractable blade-limbs, and a bioelectric venom pulse.<br>
+    <strong>👁️ Look:</strong> Deep red & black suit with golden fractal lines, hex-lens mask with amber glow, and a mechanical harness with four spider-limbs.<br>
+    <strong>🎯 Traits:</strong> Silent, strategic, obsessive trap-setter.<br>
+    <em><strong>🕸️ "I don’t chase. I wait. And when they step into the web — they’re already mine."</strong></em>
+  </p>
+</div>
+
+    <div class="card">
+  <img src="pulse.jpg" alt="Pulse">
+  <h3>🌀 Pulse – The Aether Conduit</h3>
+  <p>
+    <strong>⚔️ Real Name:</strong> Liora Kalani<br>
+    <strong>🌍 Origin:</strong> Marine physicist from Maui exposed to rare bio-electric Aether energy, fused with her nervous system and amplified through a high-tech suit.<br>
+    <strong>🧬 Powers:</strong> Power Pulse Touch (disables abilities), enhanced reflexes, energy drain risk, expert engineer with suit amplifiers.<br>
+    <strong>👁️ Look:</strong> Midnight black suit with glowing teal-blue circuits, no mask, sharp teal eyes, electric blue hair streaks, high-tech gauntlets.<br>
+    <strong>🎯 Traits:</strong> Tactical, calm, quiet, fiercely loyal.<br>
+    <em><strong>⚡ "One touch, and your strength fades — before you even know I’m here."</strong></em>
+  </p>
+</div>
+
+    <div class="card">
+  <img src="thron.jpg" alt="Thron">
+  <h3>⚡ Thron – The Magnetic Juggernaut</h3>
+  <p>
+    <strong>⚔️ Real Name:</strong> Magnus Virek<br>
+    <strong>🌍 Origin:</strong> From the floating Arctic city of Nordhjem, Magnus became bound to a sentient magnetic axe after a solar storm fused alien ore with cosmic energy. Now, he wields the power of magnetism as Earth's cosmic defender.<br>
+    <strong>🧲 Powers:</strong> Magnetokinesis, electro-magnetic shockwaves, metal surfing, magnetic awareness, and the multi-form axe Thron.<br>
+    <strong>👁️ Look:</strong> Forged armor of star-metal, glowing cobalt runes, iron-gray streaked white hair, silver-blue glowing eyes, and the runed axe Thron with a spinning energy core.<br>
+    <strong>🎯 Traits:</strong> Noble, solitary, honors strength and balance, rebellious toward divine power.<br>
+    <em><strong>🪓 "Lightning is loud. Magnetism is quiet — but it tears the world apart."</strong></em>
+  </p>
+</div>
+	
+	<div class="card">
+  <img src="rhenix.jpg" alt="Rhenix">
+  <h3>🛡️ Rhenix – The Living Arsenal</h3>
+  <p>
+    <strong>⚔️ Real Name:</strong> Dr. Elias Quade<br>
+    <strong>🌍 Origin:</strong> A reactor breach bonded Rhenium-9X to aerospace physicist Elias Quade’s body. Now a fusion of man and machine, he fights using modular armor and an intelligent combat AI.<br>
+    <strong>⚙️ Powers:</strong> Rhenium core reactor, modular battle armor (Apex, Ghost, Nova modes), supersonic flight, nanoblade drones, and the Neural Forge AI.<br>
+    <strong>👁️ Look:</strong> Sleek black-and-blue armor, glowing arc core, segmented helmet, and optional electro-fiber cape for command missions.<br>
+    <strong>🎯 Traits:</strong> Witty, arrogant but strategic, driven by guilt and perfectionism.<br>
+    <em><strong>💬 "I don’t wear armor. I am the upgrade."</strong></em>
+  </p>
+</div>
+
+    <div class="card">
+  <img src="captainus.jpg" alt="Captain U.S.">
+  <h3>🦅 Captain U.S. – The Sentinel Prototype</h3>
+  <p>
+    <strong>⚔️ Real Name:</strong> Sergeant Mason Hale<br>
+    <strong>🌍 Origin:</strong> Wounded in a black-ops mission, Mason Hale became the test subject for Project Sentinel. A nano-mesh bonded to his nervous system gave rise to the battle-hardened symbol of true freedom — Captain U.S.<br>
+    <strong>🛡️ Powers:</strong> Sentinel Weave bio-armor, adaptive combat memory, energy shield “Aegis” (gifted tech from Rhenix), force-field projection, and satellite-linked HUD for battlefield leadership.<br>
+    <strong>👁️ Look:</strong> Matte navy-blue armor, silver compass star emblem, tactical AR goggles, magnetized gear, weathered U.S. flag sash as a symbol — not propaganda.<br>
+    <strong>🎯 Traits:</strong> Disciplined, morally grounded, a leader and mentor who fights for principles over politics.<br>
+    <em><strong>🛡️ "You don’t need a flag to stand for something — you just need the strength to stand when it matters."</strong></em>
+  </p>
+</div>
+
+<div class="card">
+  <a href="trikaiju.html">
+    <img src="trikaiju-fusion.jpg" alt="Trikaiju">
+  </a>
+  <h3>💥 Trikaiju – The Fractured Titan</h3>
+  <p>
+    <strong>⚔️ Real Name:</strong> Dr. Kenji Rokuro<br>
+    <strong>🌍 Origin:</strong> A quantum psychiatrist in Osaka whose experiment fractured his psyche into three beings — Raku, Zen, and Kobi — now fused into the emotion-powered juggernaut Trikaiju.<br>
+    <strong>🔁 Forms:</strong><br>
+    <em>💢 Raku:</em> 8ft beast of rage and power<br>
+    <em>🧠 Zen:</em> Cold strategist with quantum intellect<br>
+    <em>😔 Kobi:</em> Empathic soul with healing and mind-sense<br>
+    <strong>🔥 Fusion:</strong> A 10ft psychic-armored titan with god-tier power and emotional balance.<br>
+    <strong>🎯 Traits:</strong> Shifts based on emotion; fusion only occurs in great need.<br>
+    <em><strong>🌀 "Three cannot become one… unless the world needs something greater than human."</strong></em>
+  </p>
+</div>
+
+<div class="card">
+  <a href="neurohex.html">
+    <img src="neurohex.jpg" alt="NeuroHex – The Code Witch">
+  </a>
+  <h3>🧬 NeuroHex – The Code Witch</h3>
+  <p>
+    <strong>⚔️ Real Name:</strong> Dr. Salomé Drazic<br>
+    <strong>🌍 Origin:</strong> A neurolinguist from Dubrovnik, Croatia, Salomé merged with ancient code and machine logic after a Cold War encryption accident — awakening as the digital ghost: NeuroHex.<br>
+    <strong>🧠 Powers:</strong> Neuro-cyber control, cursed code manipulation, psychic firewalls, digital possession, and core overload via code whispers.<br>
+    <strong>👁️ Look:</strong> Purple tech-suit, chrome glow, lavender code tattoos, hex-shaped floating crown, glitching cape, and glowing hex-eyes.<br>
+    <strong>🎯 Traits:</strong> Hyper-intelligent, disconnected from humanity, commands an AI swarm called "Mirn".<br>
+    <em><strong>💬 "You built machines to control the world. I became the ghost in them."</strong></em>
+  </p>
+</div>
+
+<div class="card">
+  <a href="oblivionray.html">
+    <img src="oblivionray.jpg" alt="Oblivion Ray – The Singularity Eye">
+  </a>
+  <h3>👁️‍🔥 Oblivion Ray – The Singularity Eye</h3>
+  <p>
+    <strong>⚔️ Real Name:</strong> Lucien Marceau<br>
+    <strong>🌍 Origin:</strong> French quantum soldier exposed to black hole energy during a failed CERN experiment. Now holds a micro-singularity in his right eye.<br>
+    <strong>💥 Powers:</strong> Singularity Beam (right eye), Chrono-Iris scanner (left eye), Event Horizon mode (gravity/time shockwave), energy vision, and grav-control bodysuit.<br>
+    <strong>👁️ Look:</strong> Matte black suit with violet anti-grav joints, glowing lens eye, mechanical Chrono-Iris, and gravitational exhaust vents.<br>
+    <strong>🎯 Traits:</strong> Stoic, always calculating, burdened by his power — unintentionally leads through control.<br>
+    <em><strong>💬 "I don’t aim to kill. I aim to erase the need to fight."</strong></em>
+  </p>
+</div>
+
+
+
+
+
+</body>
+</html>
